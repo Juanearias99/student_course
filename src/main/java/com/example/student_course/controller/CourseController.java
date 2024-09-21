@@ -19,10 +19,10 @@ import java.util.Optional;
 public class CourseController {
 
 
-    @Autowired //Singleton backwards for just one commentService instance
+    @Autowired //Singleton backwards for just one courseService instance
     private CourseService courseService;
 
-    //This method refers to courseService.findAll() method. Brings out every student stored in database table student as a List of students
+    //This method refers to courseService.findAll() method. Brings out every course stored in database table student as a List of courses
     @GetMapping
     public List<Course> getAllCourses() {
         return courseService.findAll();
@@ -44,7 +44,7 @@ public class CourseController {
         return courseService.save(courseDto);
     }
 
-    //This method refers to courseService.findById() and courseService.save() methods. Finds a specific student searching by id and updates it
+    //This method refers to courseService.findById() and courseService.save() methods. Finds a specific course searching by id and updates it
     //If the course is found, sets the attributes to the course in edition, saves to update and returns a 200 OK Status.
     //If there is not a course identified by that id, returns 404 Not Found Status
     @PutMapping("/{id}")
@@ -62,7 +62,7 @@ public class CourseController {
         }
     }
 
-    //This method refers to courseService.findById() and courseService.deleteById() methods. Finds a specific student searching by id and deletes it
+    //This method refers to courseService.findById() and courseService.deleteById() methods. Finds a specific course searching by id and deletes it
     //If the course is found, deletes it.
     //If there is not a course identified by that id, returns 404 Not Found Status
     @DeleteMapping("/{id}")

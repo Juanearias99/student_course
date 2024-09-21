@@ -16,7 +16,7 @@ import java.util.Optional;
 @RequestMapping("/api/Students")
 public class StudentController {
 
-    @Autowired //Singleton backwards for just one commentService instance
+    @Autowired //Singleton backwards for just one studentService instance
     private StudentService studentService;
 
     //This method refers to studentService.findAll() method. Brings out every student stored in database table student as a List of students
